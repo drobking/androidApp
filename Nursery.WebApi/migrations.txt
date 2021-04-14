@@ -1,0 +1,5 @@
+dotnet tool install --global dotnet-ef
+dotnet restore
+dotnet tool restore
+dotnet ef migrations add "Add asp.net tables" -c EFDataContext -p Nursery.EFData/Nursery.EFData.csproj -s Nursery.WebApi/Nursery.WebApi.csproj
+dotnet ef database update -c EFDataContext -p Nursery.EFData/Nursery.EFData.csproj -s Nursery.WebApi/Nursery.WebApi.csproj
